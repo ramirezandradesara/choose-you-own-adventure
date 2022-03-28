@@ -1,7 +1,7 @@
 import React from 'react';
-import { Historia } from './Historia';
-import { Opciones } from './Opciones';
-import { Recordatorio } from './Recordatorio';
+import { Historia } from './components/Historia';
+import { Opciones } from './components/Opciones';
+import { Recordatorio } from './components/Recordatorio';
 import data from './data.json';
 
 
