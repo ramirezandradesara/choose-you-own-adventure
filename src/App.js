@@ -14,22 +14,14 @@ class App extends React.Component {
       historial: [],
       contadorElecciones: 0
     };
-    this.handleClick = this.handleClick.bind(this);
   }
-
-/* componentDidUpdate() {
-  if (this.state.contadorElecciones === 4){
-    alert("Fin")
-  }
-} */
-
 
   handleClick = (e) => {
     
     if (this.state.contadorElecciones === 4) {
       alert("Fin")
       
-    } else if (e.target.id === "a" && this.state.anteriorEleccion === "a") { //
+    } else  if (e.target.id === "a" && this.state.anteriorEleccion === "a") { 
       this.setState({
         contador: this.state.contador + 2,
         anteriorEleccion: "a",
@@ -45,7 +37,7 @@ class App extends React.Component {
         contadorElecciones: this.state.contadorElecciones + 1
       });
 
-    } else if (e.target.id === "b" && this.state.anteriorEleccion === "a") {//
+    } else if (e.target.id === "b" && this.state.anteriorEleccion === "a") {
       this.setState({
         contador: this.state.contador + 3,
         anteriorEleccion: "b",
@@ -53,7 +45,7 @@ class App extends React.Component {
         contadorElecciones: this.state.contadorElecciones + 1
       });
 
-    } else if (e.target.id === "a" && this.state.anteriorEleccion !== "a") { //
+    } else if (e.target.id === "a" && this.state.anteriorEleccion !== "a") { 
       this.setState({
         contador: this.state.contador + 1,
         anteriorEleccion: "a",
@@ -64,7 +56,6 @@ class App extends React.Component {
   }
 
   render() {
-
     console.log(this.state.contadorElecciones);
     return (
       <div className='layout'>
@@ -82,12 +73,10 @@ class App extends React.Component {
             <li key={index}>
               {eleccion}
             </li>)}
-
         />
       </div>
-
     );
   }
 }
 
-export { App }
+export { App };

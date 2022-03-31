@@ -12,4 +12,4 @@ class Recordatorio extends Component{
     }
 }
 
-export {Recordatorio}
+export { Recordatorio };
