@@ -16,10 +16,26 @@ class App extends React.Component {
     };
   }
 
+  componentDidUpdate(){
+    if(this.state.contadorElecciones === 5){
+     if(window.confirm("¿Querés volver a jugar?")){
+       this.setState({
+         contador: 0,
+         anteriorEleccion: "",
+         historial: [],
+         contadorElecciones: 0
+       });
+     }
+    }
+  }
+
   handleClick = (e) => {
     
-    if (this.state.contadorElecciones === 4) {
+   if (this.state.contadorElecciones === 4) {
       alert("Fin")
+      this.setState({
+        contadorElecciones: this.state.contadorElecciones + 1
+      })
       
     } else  if (e.target.id === "a" && this.state.anteriorEleccion === "a") { 
       this.setState({
@@ -75,6 +91,7 @@ class App extends React.Component {
             </li>)}
         />
       </div>
+
     );
   }
 }
